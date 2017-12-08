@@ -6,6 +6,8 @@
 >
 > 영화 정보 및 기타 할인 적용
 
+
+
 ### 목표
 
 1. 클래스 정의
@@ -37,6 +39,40 @@
     - 영화관
 - Class point of view
   - Reservation
+    - Variable
+      - 상영관 데이터 (theaterData)
+      - 유저 정보 (UserData)
+      - 예약 날짜 (reservationDate)
+      - 인원 수 (numberOfPeople)
+      - 금액 (amoutMoney)
+      - 결제 수단 (paymentMethod)
+      - 상영관 좌석 예약 정보 (theaterSeatingReservationData)
+    - Method
+      - checkReservationData : 예약이 가능한 날짜인지 확인합니다
+      - getTheaterData : 상영관 정보를 받아옵니다
+      - getTheaterSeatingData : 상영관 좌석정보를 받아옵니다
+      - getUserData : 유저 데이터를 받아옵니다
+      - processPayment : 결제를 진행합니다
   - User
+    - Variable
+      - 이름 (name)
+      - 성별 (sex)
+      - 나이 (age)
+    - Method
   - Movie
+    - Variable
+      - 영화명 (movieTitle)
+      - 영화 시간 (movieTime)
+      - 영화 타입 (movieType)
+    - Method
   - Theater
+    - Variable
+      - 상영관 정보 (theaterInfo)
+      - 좌석 정보 (seatingInfo)
+      - 수용 인원 (capacity)
+    - Method
+
+
+
+### 아키텍쳐 설계
+
