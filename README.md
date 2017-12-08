@@ -133,9 +133,12 @@
 
 
 
-### 아키텍쳐 설계
+### 아키텍쳐 설계(Architecture Design)
 
 - 영화 예매 서브시스템
+
+  ![Architecture Design](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/Architecture Design.png)
+
   - Data Collections : 영화 예매를 위한 서브시스템으로 영화상영정보, 영화관 정보, 회원 정보를 가져온다
     - 영화 상영 정보
     - 영화관 정보
