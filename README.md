@@ -49,7 +49,7 @@
 - Class point of view
   - Reservation
 
-    ![ClassDiagram-Reservation](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/ClassDiagram-Reservation.png =250x)
+    ![ClassDiagram-Reservation](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/ClassDiagram-Reservation.png){: width="50%" height="50%"}
 
     - Variable
 
@@ -79,6 +79,9 @@
         - 결제를 진행합니다
 
   - User
+
+    ![User ClassDiagram](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/ClassDiagram-User.png){: width="50%" height="50%"}
+
     - Variable
       - 이름 (name)
       - 성별 (sex)
@@ -92,6 +95,9 @@
       - getName()
 
   - Movie
+
+    ![Movie ClassDiagram](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/ClassDiagram-Movie.png){: width="50%" height="50%"}
+
     - Variable
       - 영화명 (movieTitle)
       - 영화 시간 (movieTime)
@@ -107,6 +113,9 @@
       - getMovieLimitAge(int) : int
 
   - Theater
+
+    ![Theater ClassDiagram](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/ClassDiagram-Theater.png){: width="50%" height="50%"}
+
     - Variable
       - 상영관 정보 (theaterInfo)
       - 상영관 영화 매칭 데이터 (theaterMovieMatchingData)
