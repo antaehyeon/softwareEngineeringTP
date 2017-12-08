@@ -10,7 +10,7 @@
 
 ### 목표
 
-1. 클래스 정의
+1. [클래스 정의](https://github.com/antaehyeon/softwareEngineeringTP#클래스-정의)
 2. 아키텍쳐 설계
 3. Use-case Diagram (Description 포함)
 4. Use-case 를 기반으로 Sequence Diagram
@@ -46,10 +46,14 @@
     - 영화명, 시간, 영화관람나이
   - 영화관 데이터
     - 영화관
+
 - Class point of view
+
+  ![ClassDiagram-ALL](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/ClassDiagram-ALL.png)
+
   - Reservation
 
-    ![ClassDiagram-Reservation](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/ClassDiagram-Reservation.png){: width="50%" height="50%"}
+    ![ClassDiagram-Reservation](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/ClassDiagram-Reservation.png)
 
     - Variable
 
@@ -80,7 +84,7 @@
 
   - User
 
-    ![User ClassDiagram](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/ClassDiagram-User.png){: width="50%" height="50%"}
+    ![User ClassDiagram](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/ClassDiagram-User.png)
 
     - Variable
       - 이름 (name)
@@ -96,7 +100,7 @@
 
   - Movie
 
-    ![Movie ClassDiagram](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/ClassDiagram-Movie.png){: width="50%" height="50%"}
+    ![Movie ClassDiagram](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/ClassDiagram-Movie.png)
 
     - Variable
       - 영화명 (movieTitle)
@@ -114,7 +118,7 @@
 
   - Theater
 
-    ![Theater ClassDiagram](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/ClassDiagram-Theater.png){: width="50%" height="50%"}
+    ![Theater ClassDiagram](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/ClassDiagram-Theater.png)
 
     - Variable
       - 상영관 정보 (theaterInfo)
