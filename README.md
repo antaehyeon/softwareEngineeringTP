@@ -15,6 +15,7 @@
 3. Use-case Diagram (Description 포함)
 4. Use-case 를 기반으로 Sequence Diagram
 5. State-Chart
+6. Interface 정의
 
 
 
@@ -29,6 +30,14 @@
 
 - 개념 부분은 [이곳](http://www.nextree.co.kr/p6753/) 을 참고 (UML: 클래스 다이어그램과 소스코드 매핑)
 
+  - Generalization (일반화)
+
+    > Generalization (일반화) 은 Super(부모)클래스와 Sub(자식)클래스간의 Inheritance(상속) 관계를 나타냄
+    >
+    > 서브클래스가 주체가 되어 서브클래스를 슈퍼클래스로 Generalize 하는 것
+
+    > 반대의 개념은, 슈퍼클래스를 서브클래스로 Specialize(구체화) 하는 것
+
 
 - 영화예매 시스템에 무엇이 필요할까
   - 고객 데이터
@@ -40,6 +49,9 @@
 - Class point of view
   - Reservation
     - Variable
+
+      > field : type
+
       - 상영관 데이터 (theaterData)
       - 유저 정보 (UserData)
       - 예약 날짜 (reservationDate)
@@ -47,30 +59,58 @@
       - 금액 (amoutMoney)
       - 결제 수단 (paymentMethod)
       - 상영관 좌석 예약 정보 (theaterSeatingReservationData)
+
     - Method
-      - checkReservationData : 예약이 가능한 날짜인지 확인합니다
-      - getTheaterData : 상영관 정보를 받아옵니다
-      - getTheaterSeatingData : 상영관 좌석정보를 받아옵니다
-      - getUserData : 유저 데이터를 받아옵니다
-      - processPayment : 결제를 진행합니다
+
+      > method(type) : type
+
+      - checkReservationData(String) : boolean
+        - 예약이 가능한 날짜인지 확인합니다
+      - checkSeatingAvailability(String) : boolean
+        - 예매 가능한 좌석인지 확인합니다
+      - getTheaterData() : Theater(class)
+        - 상영관 정보를 받아옵니다
+      - getUserData() : User(class)
+        - 유저 데이터를 받아옵니다
+      - processPayment(String) : boolean
+        - 결제를 진행합니다
   - User
     - Variable
       - 이름 (name)
       - 성별 (sex)
       - 나이 (age)
+      - 등급 (grade)
+      - 핸드폰 번호 (phoneNumber)
     - Method
+      - getName(string) : string
+      - getSex(string) : string
+      - getAge(int) : int
+      - getName()
   - Movie
     - Variable
       - 영화명 (movieTitle)
       - 영화 시간 (movieTime)
       - 영화 타입 (movieType)
+      - 영화 제한 나이 (movieLimitAge)
+
     - Method
+
+      + method(type) : type
+
+      - getMovieTitle(int) : int
+      - getMovieTime(int) : int
+      - getMovieLimitAge(int) : int
   - Theater
     - Variable
       - 상영관 정보 (theaterInfo)
+      - 상영관 영화 매칭 데이터 (theaterMovieMatchingData)
       - 좌석 정보 (seatingInfo)
       - 수용 인원 (capacity)
     - Method
+      - getTheaterInfo(string) : string
+      - getSeatingInfo(hashMap) : hashMap
+      - getCapacity(int) : int
+      - getTheaterMovieMatchingData(hashMap) : hashMap
 
 
 
@@ -108,6 +148,7 @@
 
 
 - 비기능적 요구사항(Non-Functional 요구사항) : 기능에 대한 제한사항
+  - 모든 데이터는 생성자(Constructor)를 통해 초기화된다
   - 사용자의 입력이 10분동안 없을 경우 자동 로그아웃을 처리한다
   - 영화 좌석 선택 후 결제단계에 들어가면 해당 좌석은 다른사람이 선택할 수 없게 변경한다
   - 결제 단계에서 실패하였을 경우 해당 좌석을 다시 선택할 수 있게 변경한다
@@ -150,6 +191,12 @@
 6. 결제
 
 
+
+### State Chart
+
+
+
+### Interface 정의
 
 
 
