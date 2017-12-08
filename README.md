@@ -11,7 +11,7 @@
 ### 목표
 
 1. [클래스 정의](https://github.com/antaehyeon/softwareEngineeringTP#클래스-정의)
-2. 아키텍쳐 설계
+2. [아키텍쳐 설계](https://github.com/antaehyeon/softwareEngineeringTP#아키텍쳐-설계architecture-design)
 3. Use-case Diagram (Description 포함)
 4. Use-case 를 기반으로 Sequence Diagram
 5. State-Chart
@@ -137,7 +137,7 @@
 
 - 영화 예매 서브시스템
 
-  ![Architecture Design](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/Architecture Design.png)
+  ![Architecture Design](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/Architecture%20Design.png)
 
   - Data Collections : 영화 예매를 위한 서브시스템으로 영화상영정보, 영화관 정보, 회원 정보를 가져온다
     - 영화 상영 정보
@@ -176,6 +176,10 @@
   - 결제 단계에서 실패하였을 경우 해당 좌석을 다시 선택할 수 있게 변경한다
 
 
+
+![Reservation Movie Use-Case Expandable](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/Reservation%20Movie%20Use-Case%20Expandable.png)
+
+![Reservation Movie Use-Case](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/Reservation%20Movie%20Use-Case.png)
 
 - Actor
   - 영화 예매
