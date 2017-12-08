@@ -48,6 +48,9 @@
     - 영화관
 - Class point of view
   - Reservation
+
+    ![ClassDiagram-Reservation](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/ClassDiagram-Reservation.png =250x)
+
     - Variable
 
       > field : type
@@ -74,6 +77,7 @@
         - 유저 데이터를 받아옵니다
       - processPayment(String) : boolean
         - 결제를 진행합니다
+
   - User
     - Variable
       - 이름 (name)
@@ -86,6 +90,7 @@
       - getSex(string) : string
       - getAge(int) : int
       - getName()
+
   - Movie
     - Variable
       - 영화명 (movieTitle)
@@ -100,6 +105,7 @@
       - getMovieTitle(int) : int
       - getMovieTime(int) : int
       - getMovieLimitAge(int) : int
+
   - Theater
     - Variable
       - 상영관 정보 (theaterInfo)
