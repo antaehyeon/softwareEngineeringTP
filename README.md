@@ -12,10 +12,10 @@
 
 1. [클래스 정의](https://github.com/antaehyeon/softwareEngineeringTP#클래스-정의)
 2. [아키텍쳐 설계](https://github.com/antaehyeon/softwareEngineeringTP#아키텍쳐-설계architecture-design)
-3. Use-case Diagram (Description 포함)
-4. Use-case 를 기반으로 Sequence Diagram
-5. State-Chart
-6. Interface 정의
+3. [Use-case Diagram (Description 포함)](https://github.com/antaehyeon/softwareEngineeringTP#use-case)
+4. [Use-case 를 기반으로 Sequence Diagram](https://github.com/antaehyeon/softwareEngineeringTP#sequence-diagram)
+5. [State-Chart](https://github.com/antaehyeon/softwareEngineeringTP#state-chart)
+6. [Interface 정의](https://github.com/antaehyeon/softwareEngineeringTP#interface-정의)
 
 
 
@@ -208,6 +208,8 @@
 > 클래스 연관관계를 보이면 됨
 >
 > 함수를 호출하는 식으로
+
+![ReservationMovie-SequenceDiagram](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/ReservationMovie-SequenceDiagram.png)
 
 1. 영화정보 선택 - 영화정보 DB
 2. 상영관 선택 - 상영관 DB
