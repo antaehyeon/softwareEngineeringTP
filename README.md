@@ -112,9 +112,9 @@
 
       + method(type) : type
 
-      - getMovieTitle(int) : int
-      - getMovieTime(int) : int
-      - getMovieLimitAge(int) : int
+      - getMovieTitle() : int
+      - getMovieTime() : int
+      - getMovieLimitAge() : int
 
   - Theater
 
@@ -126,10 +126,10 @@
       - 좌석 정보 (seatingInfo)
       - 수용 인원 (capacity)
     - Method
-      - getTheaterInfo(string) : string
-      - getSeatingInfo(hashMap) : hashMap
-      - getCapacity(int) : int
-      - getTheaterMovieMatchingData(hashMap) : hashMap
+      - getTheaterInfo() : string
+      - getSeatingInfo() : hashMap
+      - getCapacity() : int
+      - getTheaterMovieMatchingData() : hashMap
 
 
 
@@ -226,7 +226,59 @@
 
 ### Interface 정의
 
+Class Reservation {
 
+​	public boolean checkReservationData(String);
+
+​	public boolean checkSeatingAvailability(String);
+
+​	public Theater getTheaterData();
+
+​	public User getUserData();
+
+​	public boolean processPayment(String);
+
+}
+
+
+
+Class User {
+
+​	public string getName();
+
+​	public string getSex();
+
+​	public int getAge();
+
+​	public string getName();
+
+}
+
+
+
+Class Movie {
+
+​	public int getMovieTitle();
+
+​	public int getMovieTime();
+
+​	public int getMovieLimitAge();
+
+}
+
+
+
+Class Theater {
+
+​	public string getTheaterInfo();
+
+​	public hashMap getSeatingInfo();
+
+​	public int getCapacity();
+
+​	public hashMap getTheaterMovieMatchingData();
+
+}
 
 
 
