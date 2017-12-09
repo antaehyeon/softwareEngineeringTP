@@ -222,7 +222,7 @@
 
 ### State Chart
 
-
+![State Machine](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/State%20Machine.png)
 
 ### Interface 정의
 
