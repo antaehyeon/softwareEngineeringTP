@@ -1,12 +1,14 @@
 ## 소프트웨어공학 팀프로젝트 LOG
 
+[2017-2학기 소프트웨어공학 기말고사 정리](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/FINALEXAM.md)
+
+
+
 ### 담당한 기능은 '영화예매 시스템'
 
 > 영화 예매 및 취소
 >
 > 영화 정보 및 기타 할인 적용
-
-
 
 ### 목표
 
