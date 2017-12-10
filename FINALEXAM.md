@@ -4,7 +4,7 @@
 
 개인적으로 [이곳](https://blog.naver.com/PostView.nhn?blogId=s2kiess&logNo=220155111239&parentCategoryNo=&categoryNo=159&viewDate=&isShowPopularPosts=true&from=search) 정리 짱 잘함
 
-### 6단원(System Models)
+### 6단원, System Models
 
 > 디자인 해보아라 (Data Processing model 또는 Functional processing)
 >
@@ -122,3 +122,45 @@
 
 - Data-Process, State-Machine, Object-Oriented Model
 - 특징이 무엇인지 비교했을 때 특징들을 살펴볼 것
+
+
+
+### 7단원, Software Prototyping
+
+> 시험에 관해서는 크게 나오지 않음
+
+- 소프트웨어 프로세스의 프로토타입
+  - **진화적 프로토타이핑(Evolutionary prototyping)**
+    - 초기 프로토 타입이 생성되고, 여러 단계를 거쳐 최종 시스템으로 정제(refineed)되는 시스템 개발 접근 방식
+    - 해당 프로토타입의 목적은 최종 사용자에게 작업 시스템을 제공하는 것
+    - **개발은 가장 잘 이해된 요구사항으로 시작**
+  - **Throw-away Prototyping**
+    - 일반적으로 시스템의 실용적인 구현은 **요구 사항 문제를 발견한 후 폐기하는데 도움**이 됨
+    - 다음 시스템이 다른 개발 프로세스를 사용하여 개발
+    - 해당 프로토타입(Throw-away Prototyping)은 시스템 요구사항을 검증하거나 유도하는 것
+    - **제대로 이해되지 않은 요구사항부터 시작**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
