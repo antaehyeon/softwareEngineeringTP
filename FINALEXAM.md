@@ -16,6 +16,8 @@
 
   - Composition model : 엔티티가 **다른 엔티티로 구성**되는 방법을 보여주는 구성 모델 (엔티티-관계 다이어그램)
 
+    - Semantic data models : 시스템에 의해 처리되는 데이터의 논리적인(Logical) 구조를 묘사하기 위해 사용되는 모델 (Database - ER Diagram)
+
     ![Composition Model Example](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/Composition%20Model%20Example.png)
 
   - Architectural model : 주요 **서브시스템**을 보여주는 모델 (전체적인 구조를 파악)
@@ -52,7 +54,7 @@
     - Data Flow : 데이터 자체의 흐름을 의미 (data flow)
     - Data Store : 데이터를 잠시 저장할 때 사용
 
-  - State-Machine 모델
+  - State-Machine 모델(로 디자인 하라는 문제가 나올 수 있음)
 
     ![State machine model](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/State%20machine%20model.png)
 
@@ -62,34 +64,58 @@
     - 이벤트가 발생하면 시스템은 한 상태에서 다른 상태로 전환
     - State-Charts는 UML의 중요한 부분
     - ![Microwave oven operation(a super-state)](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/Microwave%20oven%20operation(a%20super-state).png)
-    - 모델을 하위 모델로 분류할 수 있음
+    - Super-state를 이용해 모델을 하위 모델로 분류할 수 있음
 
 - 어떤 짧은 모델에 대해서 '특정 모델'로 해보아라 할 수 있음(**각 모델의 Notations가 Point**)
 
   - Data-Process 모델의 Notations : **기능처리, 데이터 저장소 및 데이터 이동**
   - State-Machine 모델의 Notations : **응답(Stimuli), 상태(State), 행동에 대한 설명(Brief description of the actions in that state)**
 
-- The Unified Modeling Language : UML
+- Object models
 
-  ![User Class Hierarchy](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/User%20Class%20Hierarchy.png)
+  - 객체 모델은 객체 클래스의 관점에서 시스템을 설명
 
-  - 광범위하게 사용되는 객체 지향 분석 및 설계 방법
-  - **객체 지향(Object-Oriented) 모델링 표기법에 대한 효과적인 표준**
-  - Notation
-    - 객체 클래스는 **상단에 있는 이름과 하위 섹션의 속성 및 하위 섹션의 작업을 포함하는 사각형으로 구성**
-    - 개체(object) 클래스(연결이라고도 함)간의 관계는 **개체를 연결하는 선**으로 표시
-    - 상속은 일반적으로 생성되며, 계층 내에서 '아래쪽'이 아닌 **'위쪽(upwards)'**으로 표시
+  - 개체 클래스는 각 개체가 제공하는 공통적인 속성 및 서비스(Operations)를 가진 개체 집합에 대한 추상화
+
+  - 시스템에 의해 조작되는 현실의 실체를 반영하는 자연적인 방법
+
+  - 추상적인 실체는 이 방법을 사용하여 모델링하는것이 더 어려움
+
+  - 개체 클래스의 식별은 응용 프로그램 도메인의 깊은 이해를 필요로하는 어려운 과정으로 인식
+
+  - 도메인 엔티티를 반영하는 객체 클래스는 시스템에서 재사용 가능
+
+  - 다양한 개체 모델
+
+    - 상속(Inheritance) 모델
+
+      - 도메인의 객체 클래스를 계층 구조로 정리
+
+      - 계층의 최상위 클래스는 모든 클래스의 공통 기능을 반영
+
+      - 객체 클래스는 속성과 서비스를 하나 이상의 상위 클래스에서 상속하며, 필요에 따라 전문화(specialised)할 수 있음
+
+      - 다른 계층의 중복을 피할 필요가 있는 경우, 클래스 계층 설계는 어려운 과정이 될 수 있음
+
+      - The Unified Modeling Language : UML
+
+        ![User Class Hierarchy](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/User%20Class%20Hierarchy.png)
+
+        - 광범위하게 사용되는 객체 지향 분석 및 설계 방법
+        - **객체 지향(Object-Oriented) 모델링 표기법에 대한 효과적인 표준**
+        - Notation
+          - 객체 클래스는 **상단에 있는 이름과 하위 섹션의 속성 및 하위 섹션의 작업을 포함하는 사각형으로 구성**
+          - 개체(object) 클래스(연결이라고도 함)간의 관계는 **개체를 연결하는 선**으로 표시
+          - **상속**은 일반적으로 생성되며, 계층 내에서 '아래쪽'이 아닌 **위쪽(upwards)**으로 표시 (정의하라는 문제가 나올 수 있음)
+
+    - 집계(Aggregation) 모델
+
+    - 상호작용(Interaction) 모델
+
+      ​
 
 
 
-- State machine model 로 디자인 하라
-  - State 단위로 해서 event가 움직이는
-  - 복잡하면 Super-state로 구성하고, 설명한다던지
-
-
-
-- 상속을 이용해서 정의해봐라
-- UML Notation (10-29) 에 맞게 그릴 것
 - Sequence Diagram은 (숙제로 하고있으므로) 디테일하게 내지 않음
 
 
