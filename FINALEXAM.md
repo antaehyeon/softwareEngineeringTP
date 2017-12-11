@@ -262,6 +262,8 @@
 
   - Repository model
 
+    ![CASE toolset architecture](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/CASE%20toolset%20architecture.png)
+
     - 서브 시스템은 데이터를 교환해야 하는데, 두가지 방법이 존재
       - 공유 데이터는 **중앙 데이터베이스 또는 저장소**에 보관되며, 모든 하위 시스템에 액세스 할 수 있음
       - **각 서브 시스템은 자체 데이터베이스를 유지/관리**하고 다른 서브 시스템에 데이터를 명시적으로 전달
@@ -270,7 +272,7 @@
       - 대량의 데이터를 효율적으로 공유하는 방법
       - 서브 시스템은 데이터가 생성되는 방식에 관여할 필요가 없음 (예 : 백업, 보안 등)
       - 공유 모델이 저장소 스키마로 게시됨
-    - **Disadvantages**
+    - **DisAdvantages**
       - 서브 시스템은 저장소 데이터 모델에 동의해야 함 (필연적으로 타협)
       - 데이터 진화(Data Evolution)는 어렵고 비용이 많이 듬
       - 특정 관리 정책에 대한 범위가 없음
@@ -278,16 +280,128 @@
 
   - Client-Server model
 
+    ![Film and picture library](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/Film%20and%20picture%20library.png)
+
     - 다양한 구성요소에서 데이터 처리가 어떻게 분산되는지를 나타내는 **분산시스템 모델**
     - 인쇄, 데이터 관리 등의 특정 서비스를 제공하는 **독립형 서버 세트(Set of stand-alone servers)**
     - 이러한 서비스를 요청하는 **클라이언트 집합**
     - 클라이언트가 서버에 액세스 할 수 있는 **네트워크**
+      - **Advantages**
+        - 데이터의 배포가 간단
+        - 네트워크로 연결된 시스템을 효과적으로 사용, 하드웨어 비용이 저렴해질 수 있음
+        - 새로운 서버를 추가하거나 기존 서버의 업그레이드가 용이
+      - **DisAdvantages**
+        - 하위 시스템이 다른 데이터 구성을 사용하도록 공유된 데이터 모델이 존재하지 않음
+        - 백업 및 복구 등을 각 서버에서 중복적으로 관리
+        - 이름과 서비스에 대한 중앙 등록이 없음
+          - 어떤 서버와 서비스를 사용할 수 있는지 찾기 힘듬
 
   - Abstract machine model (layered model)
 
-    ​
+    ![Version management system](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/Version%20management%20system.png)
+
+    - 서브 시스템의 인터페이스를 모델링하는데 사용
+    - 시스템을 일련의 레이어(또는 추상 머신)로 구성하여 각 레이어가 일련의 서비스를 제공
+    - [장점] 서로다른 계층에서 **서브시스템의 점진적 개발을 지원**
+    - [특이한 점] 계층 인터페이스가 변경되면 **인접 계층만 영향**을 받음
+    - 그러나 이런방식으로 시스템을 구조화하기에는 어려움이 따름
+    - 예 : OSI 7 계층
+
+  - Control models
+
+    > 각각이 무엇인지 파악할 것
+
+    - **서브시스템 간 제어 흐름에 관계**하고 있으며, 시스템 분해모델과 구별됨
+
+    - 구조 모델에는 제어 정보가 포함되어 있지 않음
+
+    - **중앙집중식 제어(Centralised control)**
+
+      ![Centralised management model Real-time system control](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/Centralised%20management%20model%20Real-time%20system%20control.png)
+
+      - 하나의 서브 시스템은 제어에 대한 전반적인 책임을 가지며, 다른 서브시스템을 시작 및 중지함
+
+      - 제어 서브 시스템은 다른 서브시스템의 실행을 관리하는데 책임이 있음
+
+        - **Call-Return model**
+
+          ![Call-return model](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/Call-return%20model.png)
+
+          - 서브 루틴 계층 구조의 맨 위에서 제어가 시작되고 아래쪽으로 이동하는 **하향식 서브루틴 모델**
+          - 순차 시스템에 적용 가능
+
+        - **Manager model**
+
+          - **동시 시스템(concurrent system)**에 적용가능
+          - 하나의 시스템 구성요소는 다른 시스템프로세스의 시작, 중지 및 조정을 제어
+          - 순차적 시스템에서 case문으로 구현가능
+          - 종종 'soft' 실시간 시스템에 사용됨
 
 
+    - **이벤트 기반 제어(Event-based control)**
+
+      - 각 서브 시스템은 다른 서브 시스템 또는 시스템의 외부에서 발생한 이벤트에 대응할 수 있음
+
+      - Event-driven systems
+
+        - 이벤트를 처리하는 서브 시스템을 제어하는 이벤트가 외부에서 발생하는 외부 생성 이벤트에 의해 유발
+
+        - 두개의 주요 이벤트 구동 모델
+
+          - **브로드캐스트 모델**
+
+            ![Selective_broadcasting](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/Selective_broadcasting.png)
+
+            - 이벤트는 모든 서브 시스템에 방송(전파)됨
+            - 이벤트를 처리할 수 있는 서브 시스템은 모두 가능
+            - 네트워크의 여러 시스템에서 **서브 시스템을 통합**하는데 효과적
+            - 서브 시스템은 특정 이벤트에 대한 관심을 보임
+            - 이벤트가 발생할 경우 컨트롤이 해당 이벤트를 처리할 수 있는 서브시스템으로 전송
+            - 제어 정책은 이벤트 및 메시지 핸들러에 포함되지 않으며, **서브 시스템은 관심(interest) 이벤트를 결정**
+            - 그러나 서브 시스템은 이벤트가 언제 처리될지 또는 언제 처리될지 알지 못함
+
+          - **인터럽트 구동 모델**
+
+            ![Interrupt-driven-control](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/Interrupt-driven-control.png)
+
+            - 인터럽트가 인터럽트 **핸들러**에 의해 감지되고 처리를 위해 다른 구성요소로 전달되는 **실시간 시스템에서 사용**
+            - 이벤트에 대한 빠른 응답이 필수적인 **'hard' 실시간 시스템**에 사용됨
+            - 각 유형에 대해 **핸들러가 정의된 알려진 인터럽트 유형이 존재**
+            - 각 유형의 메모리 위치에 관련된 하드웨어 스위치는 핸들러에 전송함
+            - **빠른 응답을 가능하게 하지만 프로그램이 복잡하고 검증하기 어려움**
+
+          - 다른 이벤트 기반 모델에는 AI에서 사용되는 스프레드 시트 및 규칙 기반 생산시스템이 포함됨
+
+  - 모듈 분해(Modular decomposition)
+
+    > 각각의 장점을 파악해 둘 것
+
+    - **서브 시스템이 모듈로 분해**되는 다른 구조 수준 (Modular : 서브시스템 보다 아랫단계)
+    - 2개의 모듈 분해 모델이 포함됨
+      - 시스템이 상호작용하는 객체로 분해되는 **객체지향모델**
+        - 잘 정의된 인터페이스를 사용하여, 느슨하게 결합 된 개체의 집합으로 시스템을 구성
+        - 객체 지향 분해 (object-oriented decomposition)는 **객체 클래스, 객체의 속성 및 기능**을 식별하는 것과 관련이 있음
+        - 구현 시 객체가 생성되고, 객체 작업을 조정하는 데 사용되는 일부 제어모델이 생성됨
+      - 시스템이 **입력을 출력으로 변환**하는 기능모듈로 분해되는 **데이터 흐름모델** 또는 **파이프 라인 모델**이라고도 함
+        - 함수 변환은 입력을 처리하여 출력을 생성
+        - **파이프 및 필터 모델**이라고도 함(UNIX shell과 같이)
+        - 이 방법의 변형은 매우 흔함
+        - 변환이 순차적일 때, 이는 **데이터 처리 시스템에서 광범위하게 사용**되는 일괄 배치 모델임
+        - **대화형 시스템에는 적합하지 않음**
+    - 가능한 경우 모듈이 구현될 때 까지 동시성에 대한 결정을 지연해야함
+
+  - 도메인 별 아키텍쳐 (Domain-specific architectures)
+
+    - 일부 애플리케이션 도메인에만 적용되는 아키텍쳐 모델
+    - 2가지 유형의 도메인 특정 모델
+      - 다수의 실제 시스템으로부터의 추상화되는 **일반적인 모델(Generic models)**
+        - **Bottom-up**
+        - 이러한 시스템의 주요 특징을 캡슐화함
+        - 많은 사람들이 사용함 (예: UML)
+      - 보다 추상적이고 이상적인 참조모델(Reference model)
+        - **Top-down**
+        - 시스템 클래스에 대한 정보를 제공하고 다양한 아키텍처를 비교
+        - 누가 주는 것?
 
 
 
