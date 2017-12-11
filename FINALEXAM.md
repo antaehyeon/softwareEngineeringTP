@@ -502,7 +502,7 @@
 
 
 
-### 10장, Object-oriented Design
+### 10단원, Object-oriented Design
 
 > UML로 간단하게 그려보는 정도
 >
@@ -533,7 +533,7 @@
 
 
 
-### 11장, Real-time Software Design
+### 11단원, Real-time Software Design
 
 > Real-time System이 무엇인가
 
@@ -603,6 +603,136 @@
   - 실시간 경영진은 RTS의 프로세스를 관리하는 전용 운영 체제
   - 프로세스 관리 및 자원(프로세서 및 메모리) 할당을 담당
   - 파일 관리 등의 기능은 포함하지 않음
+
+
+
+### 12단원, Software testing
+
+- 테스트 프로세스
+
+  - 구성요소 테스트
+    - 개별 프로그램 구성요소 테스트
+    - 일반적으로 구성요소 개발자의 책임(때로는 중요한 시스템의 경우 제외)
+    - 테스트는 개발자의 경험으로부터 얻어짐
+  - 통합 시험
+    - 시스템 또는 서브 시스템을 만들기 위해 통합된 구성요소 그룹 테스트
+    - 독립적인 테스트 팀의 책임
+    - 테스트는 시스템 사양을 기반으로 진행
+
+- Black-box 테스팅
+
+  ![Black-box testing](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/Black-box%20testing.png)
+
+  - 프로그램이 '블랙 박스'로 간주되는 시험방법
+  - 내부를 모르기 때문에 기능이 되는지 안되는지(functional testing)
+  - 프로그램 테스트 사례는 시스템 사양을 기반으로 진행
+  - 입력 및 관련 출력을 연구함으로써
+    - I : 변칙적인 행동을 일으키는 입력들
+    - O^e : 결함의 존재를 나타내는 출력
+
+- 등가 분할(Equivalence partitioning )
+
+  - 입력 데이터와 출력 결과는 클래스의 모든 멤버가 관련된 다른 클래스로 분류되는 경우가 종종 있음
+  - 각 클래스의 각 프로그램이 각 클래스 멤버에 대해 동일한 방식으로 작동하는 등가 파티션
+  - 각 파티션에서 테스트 사례를 선택해야함
+  - 최소, 최대, 중간값으로 테스트
+
+- 구조 테스팅(Structural testing)
+
+  ![White-box testing](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/White-box%20testing.png)
+
+  - '화이트 박스' 테스팅이라고 불리는 경우
+  - 프로그램 structure 구조물에 따른 시험 사례의 파생
+  - 프로그램에 대한 지식(알고리즘)은 추가 테스트 사례를 식별하는데 사용됨
+    - 예 : Binary search 를 알고있다면 어떻게 동작하는지 알기 때문에 짝수일때와 홀수일때의 조건을 미리 추가할 수 있음 (유명한 알고리즘에 대해서는 모두 오픈되어있으므로)
+  - 목표는 모든 프로그램(모든 경로조합이 아닌)을 연습하는 것
+
+- 경로 테스팅(Path testing)
+
+  - 경로 테스트의 목적은 프로그램의 각 경로가 적어도 한번 실행되도록 하기위한 시험을 실시하는 것
+  - 경로시험의 시작점은 프로그램의 결정을 나타내는 노드와 제어흐름을 나타내는 아크를 나타내는 프로그램 흐름 그래프
+  - 따라서 조건부 문장은 흐름 그래프의 노드이다
+
+- 프로그램 흐름 그래프
+
+  ![binary search flow graph](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/binary%20search%20flow%20graph.png)
+
+  - 프로그램 제어 흐름을 설명합니다. 각 분기는 별도의 경로로 표시되며 화살표는 루프 조건 노드로 다시 루프됨
+  - 순환적 복잡성을 계산하기 위한 기초로 사용됨
+
+- 통합 테스트(Integration testing)
+
+  ![Incremental integration testing](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/Incremental%20integration%20testing.png)
+
+  - 통합 구성 요소로 구성된 전체 시스템 또는 서브 시스템을 테스트
+  - 통합 테스트는 사양에서 파생된 테스트를 사용하여 '블랙 박스' 테스트를 수행해야함
+  - 주요 어려움은 오류를 찾는 것
+  - 점진적 통합 테스트를 통해 이 문제를 줄일 수 있다
+
+- **테스팅 방법**
+
+  - 구조 검증(Architectural validation)
+    - Top-down 통합 테스트는 시스템 아키텍쳐의 오류를 발견하는데 적합함
+  - 시스템 시연(System demonstration)
+    - Top-down 통합 테스트를 통해 개발의 초기 단계에서는 제한된 데모가 가능
+  - 테스트 구현(Test implementation)
+    - Bottom-up 통합 테스트를 통해 간편하게 수행
+  - 시험 관찰(Test Observation)
+    - 두가지 접근법의 문제점(검사를 관찰하기 위해 추가 코드가 필요할 수 있음)이 존재
+
+- 인터페이스 테스팅
+
+  ![Interface testing](https://github.com/antaehyeon/softwareEngineeringTP/blob/master/image/Interface%20testing.png)
+
+  - 모듈이나 서브시스템을 통합하여 대규모 시스템을 구축할 때 사용
+  - 인터페이스 오류 및 인터페이스에 대한 **잘못된 가정에 의한 오류를 감지하는 것이 목적**
+  - **객체가 인터페이스에 의해 정의**되기 때문에 **객체 지향 개발에서 특히 중요**
+
+- 인터페이스 타입
+
+  - 파라미터 인터페이스
+    - 한 절차에서 다른 절차로 전달된 데이터
+  - 공유 메모리 인터페이스
+    - 절차 간에 메모리 블록 공유
+  - 절차 인터페이스
+    - 서브 시스템은 다른 서브 시스템에 의해 불려가는 일련의 절차를 캡슐화함
+  - 메시지 전달 인터페이스
+    - 서브시스템은 다른 서브 시스템에서 서비스를 요청
+
+- 인터페이스 오류
+
+  - 인터페이스 오용
+    - 호출 구성 요소가 다른 구성 요소를 호출하고, 잘못된 순서의 매개변수를 사용하여 인터페이스를 사용하는데 오류가 발생함
+  - 인터페이스 오해(misunderstanding)
+    - 호출 구성 요소는 잘못된 구성 요소의 동작에 대해 가정
+  - 타이밍 오류(Timing errors)
+    - 호출 및 호출 구성요소가 서로 다른 속도로 작동하고 오래된 정보에 액세스함
+
+- 스트레스 테스팅
+
+  - 최대 설계 하중을 초과하여 시스템을 테스팅. 시스템에 압력을 가하면 결함이 발생함
+  - 시스템 테스트 실패 행위를 간소화함. 시스템은 치명적으로 고장이 나지 않아야 한다. 
+  - 스트레스 테스트는 허용되지 않은 서비스 또는 데이터의 손실여부를 점검함
+  - 네트워크가 과부화되면 성능의 심각한 저하를 보일 수 있는 분산시스템과 관련이 있음
+
+- Object-oriented 테스팅
+
+  - 테스트 할 구성요소는 객체로 인스턴스화 되는 객체 클래스임
+  - 개별 기능보다 입자가 크기 때문에 화이트 박스 테스트에 접근을 확장해야 함
+  - 하향식 통합 및 테스트를 위한 확실한 방법이 존재하지 않음
+  - 테스트가 어려운 이유는 순서대로 흘러가지 않고 Object끼리 interaction 하기 때문이다
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
